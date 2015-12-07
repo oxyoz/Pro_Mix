@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;jni&apos;&#x0D;&#x0A;- Original project: &apos;Plasma&apos;&#x0D;&#x0A;- Destination element: &apos;jni&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Android.mk&#x0D;&#x0A;     Application.mk" description="Copy files" element1="jni/Android.mk" element2="jni/Application.mk" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1449482551104" target="/Jni_1/jni" units="0" version="1.0"/>
+</session>

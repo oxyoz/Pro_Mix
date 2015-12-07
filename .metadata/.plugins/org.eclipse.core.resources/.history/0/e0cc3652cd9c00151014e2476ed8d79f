@@ -1,0 +1,15 @@
+package com.oz.code.nlib;
+
+public class Nutils
+{
+
+	public native int getString();
+	
+	static 
+	{
+		
+		System.loadLibrary("a");
+		
+	}
+	
+}

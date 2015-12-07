@@ -1,0 +1,10 @@
+#include<jni.h>
+
+JNIEXPORT jstring JNICALL Java_com_oz_code_nlib_Nutils_getString
+  (JNIEnv * env, jobject obj)
+{
+
+
+	return
+
+}
