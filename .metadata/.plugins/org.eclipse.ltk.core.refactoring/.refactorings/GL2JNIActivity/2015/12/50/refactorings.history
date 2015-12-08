@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;GL2JNIActivity/jni/com_android_gl2jni_GL2JNILib.h&apos; to &apos;gl_code.h&apos;" description="Rename resource &apos;com_android_gl2jni_GL2JNILib.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="jni/com_android_gl2jni_GL2JNILib.h" name="gl_code.h" stamp="1449561021585" updateReferences="true"/>
+</session>

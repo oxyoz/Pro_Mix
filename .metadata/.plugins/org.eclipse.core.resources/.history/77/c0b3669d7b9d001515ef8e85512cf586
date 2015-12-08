@@ -1,0 +1,15 @@
+#include <jni.h>
+#include <sys\file.h>
+
+JNIEXPORT jstring JNICALL Java_com_oz_code_nutils_Nutils_getString
+  (JNIEnv *evn, jclass clazz)
+{
+
+	jstring jstr = "12345657890";
+
+
+	char *p = "12345657890";
+
+	return *p;
+
+}

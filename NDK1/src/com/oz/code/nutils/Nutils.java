@@ -1,0 +1,16 @@
+package com.oz.code.nutils;
+
+public class Nutils
+{
+	
+	static{
+				
+		System.loadLibrary("a");
+		
+	}
+	
+	public native static String getString();
+	
+	public native static int getInt();
+	
+}

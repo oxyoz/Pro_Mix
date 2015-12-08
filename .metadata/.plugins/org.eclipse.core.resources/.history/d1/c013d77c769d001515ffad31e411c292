@@ -1,0 +1,15 @@
+package com.oz.code.nutils;
+
+public class Nutils
+{
+
+	
+	
+	static{
+		
+		
+		System.loadLibrary("a");
+		
+	}
+	
+}

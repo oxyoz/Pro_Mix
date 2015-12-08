@@ -1,3 +1,4 @@
+com.android.ide.eclipse.ddms.perspectiveId=org.eclipse.debug.ui.DebugPerspective
 ddms.logcat.auotmonitor.level=error
 ddms.logcat.automonitor.userprompt=true
 eclipse.preferences.version=1

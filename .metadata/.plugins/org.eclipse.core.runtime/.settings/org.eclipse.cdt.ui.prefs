@@ -15,10 +15,13 @@ content_assist_parameters_foreground=246,243,232
 content_assist_proposals_background=36,36,36
 content_assist_proposals_foreground=246,243,232
 eclipse.preferences.version=1
+formatter_profile=org.eclipse.cdt.ui.default.gnu_profile
+formatter_settings_version=1
 inactiveCodeColor=97,97,97
 org.eclipse.cdt.internal.ui.text.doctools.multi=179,181,175
 org.eclipse.cdt.internal.ui.text.doctools.recognizedTag=167,167,209
 org.eclipse.cdt.internal.ui.text.doctools.single=179,181,175
+org.eclipse.cdt.ui.text.templates.custom=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 pp_default=246,243,232
 pp_directive=138,198,242
 pp_header=149,228,84

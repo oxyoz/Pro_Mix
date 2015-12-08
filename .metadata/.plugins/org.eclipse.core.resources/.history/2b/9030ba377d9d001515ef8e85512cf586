@@ -1,0 +1,20 @@
+#include <jni.h>
+
+JNIEXPORT jstring JNICALL Java_com_oz_code_nutils_Nutils_getString
+  (JNIEnv *evn, jclass clazz)
+{
+
+	jstring jstr = "12345657890";
+
+	return jstr;
+
+}
+
+
+JNIEXPORT jint JNICALL Java_com_oz_code_nutils_Nutils_getInt
+  (JNIEnv *env, jclass clazz)
+{
+
+
+return 1234567890;
+}
