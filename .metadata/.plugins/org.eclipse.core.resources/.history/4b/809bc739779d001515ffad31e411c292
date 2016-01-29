@@ -1,8 +1,0 @@
-#include <jni.h>
-
-jstring Java_com_oz_code_nutils_Nutils_getString
-  (JNIEnv * evn, jclass clazz)
-{
-
-
-}

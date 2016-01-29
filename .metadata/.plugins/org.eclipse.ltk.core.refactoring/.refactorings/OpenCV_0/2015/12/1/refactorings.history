@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;OpenCV_0/jni/oz_code_opencv_imgproc_ImgProc.h&apos; to &apos;a.h&apos;" description="Rename resource &apos;oz_code_opencv_imgproc_ImgProc.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="jni/oz_code_opencv_imgproc_ImgProc.h" name="a.h" stamp="1451294347996" updateReferences="true"/>
+</session>

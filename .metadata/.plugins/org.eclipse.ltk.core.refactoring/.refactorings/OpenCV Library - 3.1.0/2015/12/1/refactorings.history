@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 2 elements from project &apos;OpenCV Library - 3.1.0&apos;&#x0D;&#x0A;- Original project: &apos;OpenCV Library - 3.1.0&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     etc&#x0D;&#x0A;     native" description="Delete elements" element1="etc" element2="native" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="2" stamp="1451292416799" subPackages="false" version="1.0"/>
+</session>

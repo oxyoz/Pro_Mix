@@ -1,0 +1,170 @@
+package com.meigao.mgolf;
+
+import java.util.HashMap;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+import cn.sharesdk.framework.Platform;
+import cn.sharesdk.framework.PlatformActionListener;
+import cn.sharesdk.framework.ShareSDK;
+import cn.sharesdk.wechat.friends.Wechat;
+
+public class MainActivity extends Activity
+		implements View.OnClickListener, Handler.Callback
+{
+	
+	private static final int MSG_USERID_FOUND = 1;
+	private static final int MSG_LOGIN = 2;
+	private static final int MSG_AUTH_CANCEL = 3;
+	private static final int MSG_AUTH_ERROR= 4;
+	private static final int MSG_AUTH_COMPLETE = 5;
+	
+
+	private Button		btn_wxlogin;
+
+	private TextView	txt_info;
+
+	@Override
+	public boolean handleMessage(Message msg)
+	{
+
+		if (msg.what == 0)
+		{
+
+			String str = (String) msg.obj;
+
+			txt_info.setText(str);
+
+		}
+
+		return false;
+	}
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+
+		ShareSDK.initSDK(this);
+		
+		setContentView(R.layout.activity_main);
+
+		btn_wxlogin = (Button) findViewById(R.id.btn_wxlogin);
+
+		txt_info = (TextView) findViewById(R.id.txt_info);
+
+		btn_wxlogin.setOnClickListener(this);
+
+	}
+
+	@Override
+	public void onClick(View v)
+	{
+
+		Platform wechat = new Wechat(this);
+
+		String userId = wechat.getDb().getUserId();
+
+		txt_info.setText("userId:" + userId);
+
+		wechat.setPlatformActionListener(new PlatformActionListener()
+		{
+
+			@Override
+			public void onError(Platform arg0, int action, Throwable arg2)
+			{
+
+				String str = arg0.toString();
+
+				Message msg = Message.obtain();
+
+				msg.what = 0;
+
+				msg.obj = str;
+
+				mHandler.sendMessage(msg);
+
+			}
+
+			@Override
+			public void onComplete(Platform platform, int action, HashMap<String, Object> res)
+			{
+				// 解析部分用户资料字段
+				String id, name, description, profile_image_url;
+				id = res.get("id").toString();// ID
+				name = res.get("name").toString();// 用户名
+				description = res.get("description").toString();// 描述
+				profile_image_url = res.get("profile_image_url").toString();// 头像链接
+				String str = "ID: " + id + ";\n" + "用户名： " + name + ";\n" + "描述：" + description + ";\n" + "用户头像地址：" + profile_image_url;
+
+				Message msg = Message.obtain();
+
+				msg.what = 0;
+
+				msg.obj = str;
+
+				mHandler.sendMessage(msg);
+			}
+
+			@Override
+			public void onCancel(Platform arg0, int action)
+			{
+
+				String str = arg0.toString();
+
+				Message msg = Message.obtain();
+
+				msg.what = 0;
+
+				msg.obj = str;
+
+				mHandler.sendMessage(msg);
+
+			}
+
+		}); // 设置分享事件回调
+
+		wechat.SSOSetting(false);
+
+		wechat.showUser(null);
+
+		wechat.authorize();
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu)
+	{
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item)
+	{
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) { return true; }
+		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	protected void onDestroy()
+	{
+		ShareSDK.stopSDK(this);
+
+		super.onDestroy();
+	}
+
+}

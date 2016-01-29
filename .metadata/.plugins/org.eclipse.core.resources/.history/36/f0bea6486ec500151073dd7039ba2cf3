@@ -1,0 +1,59 @@
+package oz.code.test;
+
+public class Test
+{
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+
+
+class Person
+{
+	
+	private String name;
+	
+	protected int age;
+
+	public char sex;
+
+	int score;
+	
+}
+
+
+
+class Student extends Person
+{
+	
+	public void showInfo()
+	{
+		int age = this.age;
+		
+		int score = this.score;
+		
+		int sex = this.sex;
+			
+		System.out.println();
+		
+	}
+
+}
+
+
+class Teacher extends Student
+{
+	
+
+
+	
+	
+}
+
+
+

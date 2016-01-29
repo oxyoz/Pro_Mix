@@ -1,0 +1,86 @@
+package oz.code.test;
+
+public class Test
+{
+
+	public static void main(String[] args)
+	{
+
+		Student s = new Student();
+
+		Teacher t = new Teacher();
+
+		Proffesion p = new Proffesion();
+
+		s.showInfo();
+
+		t.showInfo();
+
+		p.showInfo();
+
+	}
+
+}
+
+class Person
+{
+
+	private String	name;
+
+	protected int	age;
+
+	public char		sex;
+
+	int				score;
+
+}
+
+class Student extends Person
+{
+
+	public void showInfo()
+	{
+		int age = this.age;
+
+		int score = this.score;
+
+		int sex = this.sex;
+
+		System.out.println(age + "  " + score + "  " + score);
+
+	}
+
+}
+
+class Teacher extends Student
+{
+
+	public void showInfo()
+	{
+		int age = this.age;
+
+		int score = this.score;
+
+		int sex = this.sex;
+
+		System.out.println(age + "  " + score + "  " + score);
+
+	}
+
+}
+
+class Proffesion extends Teacher
+{
+
+	public void showInfo()
+	{
+		int age = this.age;
+
+		int score = this.score;
+
+		int sex = this.sex;
+
+		System.out.println(age + "  " + score + "  " + score);
+	}
+
+}

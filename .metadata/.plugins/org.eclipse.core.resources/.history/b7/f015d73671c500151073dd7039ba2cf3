@@ -1,0 +1,60 @@
+//============================================================================
+// Name        : C_ExtendsDemo.cpp
+// Author      : oz
+// Version     :
+// Copyright   : Your copyright notice
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Person
+{
+
+private:
+  string name;
+
+protected:
+  int age;
+
+public:
+  char sex;
+
+  int score;
+};
+
+
+
+class Student:public Person
+{
+
+public:
+ void showInfo()
+  {
+    int age = this->age;
+
+    char sex = this->sex;
+
+    int score = this->score;
+
+    cout<<age<<"  "<<sex<<"  "<<score<<endl;
+
+  }
+
+};
+
+
+
+
+
+
+
+int
+main()
+{
+  cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+  return 0;
+}

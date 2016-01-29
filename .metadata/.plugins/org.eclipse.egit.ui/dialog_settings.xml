@@ -2,9 +2,11 @@
 <section name="Workbench">
 	<item value="true" key="CommitDialog.showUntracked"/>
 	<list key="CommitDialog.authorValues">
+		<item value="857527916@qq.com] &lt;857527916@qq.com&gt;"/>
 		<item value="oz &lt;857527916@qq.com&gt;"/>
 	</list>
 	<list key="CommitDialog.committerValues">
+		<item value="857527916@qq.com] &lt;857527916@qq.com&gt;"/>
 		<item value="oz &lt;857527916@qq.com&gt;"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
